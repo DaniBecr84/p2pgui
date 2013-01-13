@@ -1,0 +1,2 @@
+mkdir /sdcard/data/victim_data
+adb pull /sdcard/data/* /sdcard/data/victim_data

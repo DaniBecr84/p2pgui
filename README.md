@@ -39,7 +39,8 @@ the lock screen on the victim phone.
 #Credits
 Note: If you're looking to report a bug, please use the issue tracker in GitHub. Support can also be found that way. 
 
-Thanks to [@thekos](https://twitter.com/#!/thekos) for his original idea [p2p-adb](https://github.com/kosborn/p2p-adb)
+Thanks to [@thekos](https://twitter.com/#!/thekos) for his original idea [p2p-adb](https://github.com/kosborn/p2p-adb) 
+and AnitGuard/installAnti.sh
 
 x942 (me) for p2pgui app
 

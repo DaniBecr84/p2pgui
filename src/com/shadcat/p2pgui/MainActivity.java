@@ -165,7 +165,7 @@ final Button button2 = (Button)  findViewById(R.id.button2);
 	button5.setOnClickListener(new View.OnClickListener() {
         public void onClick(View v) {
             Intent myWebLink = new Intent(android.content.Intent.ACTION_VIEW);
-            myWebLink.setData(Uri.parse("http://www.github.com/x942/p2pgui/blob/README.md"));
+            myWebLink.setData(Uri.parse("http://www.github.com/x942/p2pgui"));
                 startActivity(myWebLink);
          }
 	
